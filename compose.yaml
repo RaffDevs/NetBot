@@ -1,0 +1,21 @@
+﻿services:
+  netbot.webapp:
+    image: netbot.webapp
+    build:
+      context: .
+      dockerfile: NetBot.Webapp/Dockerfile
+
+
+  waha:
+    restart: always
+    image: devlikeapro/waha
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '100m'
+        max-file: '10'
+    ports:
+      - '127.0.0.1:3000/tcp'
+    volumes:
+      - './sessions:/app/.sessions'
+      - './media:/app/.media'
