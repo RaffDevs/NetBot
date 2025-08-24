@@ -17,7 +17,7 @@ services:
         max-size: '100m'
         max-file: '10'
     ports:
-      - '127.0.0.1:3000/tcp'
+      - 'localhost:3000/tcp'
     volumes:
       - './sessions:/app/.sessions'
       - './media:/app/.media'
