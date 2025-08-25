@@ -1,11 +1,10 @@
-﻿version: "3.8"
-
+﻿
 services:
-  netbot.webapp:
-    image: netbot.webapp
-    build:
-      context: .
-      dockerfile: NetBot.Webapp/Dockerfile
+#  netbot.webapp:
+#    image: netbot.webapp
+#    build:
+#      context: .
+#      dockerfile: NetBot.Webapp/Dockerfile
 
 
   waha:
@@ -21,3 +20,11 @@ services:
     volumes:
       - './sessions:/app/.sessions'
       - './media:/app/.media'
+#    env_file:
+#      - .env
+#  netbot.api:
+#    image: netbot.api
+#    build:
+#      context: .
+#      dockerfile: NetBot.Api/Dockerfile
+
